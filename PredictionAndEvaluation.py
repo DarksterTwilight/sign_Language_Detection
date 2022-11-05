@@ -11,8 +11,8 @@ from data_preprocessing import X_test, y_test
 from make_dir import actions
 from keras.models import load_model
 print("Loading Modle")
-model = load_model('action.h5')
-
+model = load_model('action2.h5')
+model.summary()
 res = model.predict(X_test)
 
 actions[np.argmax(res[4])]
